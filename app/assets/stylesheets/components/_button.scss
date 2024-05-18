@@ -1,0 +1,10 @@
+.btn-link-red {
+  color: red;
+  text-decoration: none;
+}
+
+.btn-link-red:hover,
+.btn-link-red:focus {
+  color: darkred;
+  text-decoration: underline;
+}

@@ -14,6 +14,18 @@ class FlatsController < ApplicationController
     redirect_to flats_path
   end
 
+  def destroy
+    @flat = Flat.find(params[:id])
+    @flat.destroy!
+
+    redirect_to flats_path
+  end
+
+
+  def show 
+    @flat = Flat.find(params[:id])
+  end
+
     # Only allow a list of trusted parameters through.
   def flat_params
     params.require(:flat).permit(:name, :address, :description, :price_per_night, :number_of_guests)

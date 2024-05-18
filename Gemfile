@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
+gem 'sassc-rails'
+
 # simple form
 gem "simple_form"
 

@@ -15,7 +15,13 @@
           </div>
           </div>
           <div class="card-footer bg-transparent">
-            <a href="#" class="btn btn-primary">Show Details</a>
+            <div class="d-flex justify-content-start">
+              <%= link_to "Show More", flat_path(flat), class: "btn btn-primary" %>
+              <%= link_to "Delete", flat_path(flat), class: "btn btn-link btn-link-red", data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+            </div>
           </div>
         </div>
       </div>
