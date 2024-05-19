@@ -1,6 +1,7 @@
 <div class="container">
   <div class=" my-4">
-    <h1>All Our Flats (<%= @flats.length %>)</h1>
+    <h1>All our Flats (<%= @flats.length %>)</h1>
+    <p>You searched for <strong><%= @query %></strong> and you got <strong><%= @flats.length  %></strong> results. </p>
   </div>
   <div class="row">
     <% @flats.reverse_each do |flat| %>

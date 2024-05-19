@@ -39,6 +39,15 @@ class FlatsController < ApplicationController
     @flat = Flat.find(params[:id])
   end
 
+  def search
+    @query = params[:query]
+    if @query.present?
+      @flats = Flat.where("name LIKE ?", "%#{@query}%")
+    else
+      redirect_to flats_path
+    end
+  end
+
   private 
     # Only allow a list of trusted parameters through.
   def flat_params
