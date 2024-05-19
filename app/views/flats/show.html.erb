@@ -1,4 +1,4 @@
-  <%= link_to "Back to All Flats", flats_path %>
+  <%= link_to "Show All Flats", flats_path %>
 
 <div class="card bg-light mb-3 my-4">
   <div class="card-body">
@@ -16,8 +16,8 @@
   <div class="card-body ">
     <h5 class="card-title">Details</h5>
     <div class="d-flex justify-content-start mb-0" >
-      <p class="card-text"><i class="fa-solid fa-euro-sign"> </i> <%= @flat.price_per_night %>.00</p>
-      <p class="card-text mx-2"><i class="fa-solid fa-user-group"> </i> <%= @flat.number_of_guests %></p>    
+      <p class="card-text" data-toggle="tooltip" data-placement="top" title="Price per night"><i class="fa-solid fa-euro-sign"> </i> <%= @flat.price_per_night %>.00</p>
+      <p class="card-text mx-2" data-toggle="tooltip" data-placement="top" title="Maximum number of guests"><i class="fa-solid fa-user-group"> </i> <%= @flat.number_of_guests %></p>    
     </div>
   </div>
 </div>

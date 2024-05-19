@@ -10,14 +10,15 @@
             <h5 class="card-title"><%= flat.name %></h5>
             <p class="card-text"><%= flat.address %></p>    
           <div class="d-flex justify-content-start pt-1">
-            <p class="card-text"><i class="fa-solid fa-euro-sign"> </i> <%= flat.price_per_night %>.00</p>
-            <p class="card-text mx-2"><i class="fa-solid fa-user-group"> </i> <%= flat.number_of_guests %></p>    
+            <p class="card-text" ><i class="fa-solid fa-euro-sign"> </i> <%= flat.price_per_night %>.00</p>
+            <p class="card-text mx-2" ><i class="fa-solid fa-user-group"> </i> <%= flat.number_of_guests %></p>    
           </div>
           </div>
           <div class="card-footer bg-transparent">
             <div class="d-flex justify-content-start">
-              <%= link_to "Show More", flat_path(flat), class: "btn btn-primary" %>
-              <%= link_to "Delete", flat_path(flat), class: "btn btn-link btn-link-red", data: {
+              <%= link_to "Show More", flat_path(flat), class: "btn btn-link px-0" %>
+              <%= link_to "Edit", edit_flat_path(flat), class: "btn btn-link btn-link-yellow px-4" %>
+              <%= link_to "Delete", flat_path(flat), class: "btn btn-link btn-link-red px-0", data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %>
